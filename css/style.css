@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: 4fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:    "encabezado     encabezado      encabezado"
+                            "principal      principal       publicidad"
+                            "pie_de_pagina  pie_de_pagina   pie_de_pagina";
+}
+
+header {
+    grid-area: encabezado;
+    border-style: groove;
+}
+
+.header--img {
+    background-image: url(https://st2.depositphotos.com/1606449/7516/i/600/depositphotos_75163555-stock-photo-cats-and-dogs-hanging-paws.jpg); 
+    background-repeat: none;
+}
+
+main {
+    grid-area: principal;
+    border-radius: 40px;
+    border-style: groove;
+}
+
+.main--index{
+    display: flex;
+    justify-content: center;
+}
+
+.form--contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.div--main{
+    display: flex;
+    align-content:flex-start;
+}
+
+aside {
+    grid-area: publicidad;
+    display: flex;
+    flex-wrap: wrap;
+    image-resolution: auto;
+    border-style: groove;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.img--publicidad {
+    border-radius: 10px;
+}
+
+.img--contactanos {
+    border-radius: 10px;
+    width: min-content;
+    height: 800px;
+}
+
+footer {
+    grid-area: pie_de_pagina;
+    background-color: rgb(153, 131, 173);
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.whatsapp{
+    background-color: green;
+    color: aliceblue    ;
+}
+
+.linkedin{
+    background-color: blanchedalmond;
+    color: blue;
+}
+
+.facebook{
+    background-color: azure ;
+    color: rgb(17, 5, 107);
+}
+
+.p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:x-large;
+    color: red;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+div li{
+    display: inline-flex;
+    list-style-type: none;
+    text-decoration-line: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(108, 103, 103);
+    border-radius: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-image-repeat:round;
+    border-style:double;
+}
+
+.titulo-principal {
+    display: flex;
+    flex-direction: row;
+    text-justify: distribute;
+}
+
+main div h1{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+.parallax{
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  cover;
+	height:30rem;
+	max-width: 100%;
+	position: relative;
+}
+
+.ul-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.h234--acerca_de_nos{
+    display: flex;
+    justify-content: center;
+}
+
+.div--acerca_de_nos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.p--acerca_de_nos{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        display:grid;
+        grid-template-columns: 2fr 4fr;
+        grid-template-rows: 2fr 4fr;
+        grid-template-areas:    "encabezado"
+                                "principal"
+                                "publicidad"
+                                "pie_de_pagina";
+    }
+
+    .header--img {
+        background-image: url(https://st2.depositphotos.com/1606449/7516/i/600/depositphotos_75163555-stock-photo-cats-and-dogs-hanging-paws.jpg); 
+        background-repeat: no-repeat;
+    }
+
+    .img--publicidad {
+        display: flex;
+        justify-content: center;
+        flex-wrap:nowrap;
+        border-radius: 10px;
+        width: 587px;
+    }
+    .img--publicidad2 {
+        display: flex;
+        justify-content: center;
+        flex-wrap:wrap-reverse;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .grid{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr ;
+        grid-template-areas:    "encabezado"
+                                "principal"
+                                "publicidad"
+                                "pie_de_pagina";
+    }
+
+    .header--img {
+        background-image: url(https://st2.depositphotos.com/1606449/7516/i/600/depositphotos_75163555-stock-photo-cats-and-dogs-hanging-paws.jpg); 
+        background-repeat: no-repeat;
+    }
+    
+    .ul {
+        display: flex;
+        justify-items: flex-start;
+        align-items: center;
+    }
+
+    .img--contactanos {
+        border-radius: 10px;
+        height: 200px;
+    }
+}
